@@ -12,7 +12,10 @@
    <style  type="text/css">
    
   
-
+        #time{
+                  white-space: nowrap; 
+                  font-size: 2rem;
+              }
 
         .home{
             width: 100%;
@@ -259,13 +262,31 @@
        
         
       }
+      #date{
+        color: antiquewhite;
+      }
+      #time{
+        color: antiquewhite;
+      }
   
   }
         
     </style>
+
+<script type="text/javascript">
+    function bodyload(){
+      var dept = new Date();
+        var day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        var month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+      //  document.write(day[dept.getDay()] + dept.getDate() + month[dept.getMonth()] + dept.getFullYear() )
+        document.getElementById("date").innerHTML=(`${ day[dept.getDay()]}&nbsp;${ dept.getDate()}${ month[dept.getMonth()]}&nbsp;${ dept.getFullYear()}`)
+        setInterval(function(){ var time = new Date();
+          document.getElementById("time").innerHTML =time.toLocaleTimeString();},100)
+    }
+</script>
    
 </head>
-  <body class="body">
+  <body class="body" onload="bodyload()">
 
     <!--Nav bar--> 
     
@@ -291,12 +312,14 @@
                     <a class="nav-link" href="#education"><span  class="bg-white text-primary p-2 border rounded-2 ">Education</span> </a>
                   </li>
                   <li class="nav-item">
-                    <a style="text-decoration: none;"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> <span  class=" bg-white text-primary p-2 border rounded-2">Personal Information <span class="bi bi-card-list"></span></span></a>
+                    <a class="nav-link"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> <span  class=" bg-white text-primary p-2 border rounded-2">Personal Information <span class="bi bi-card-list"></span></span></a>
 
                   </li>
                 </ul>
               </div>
             </div>
+            <div ><span id="date" class="px-3 fw-bold fs-3"></span> </div>
+            <div  class="px-3 fw-bold fs-4" id="time"></div>
           </nav>
           
           
@@ -319,6 +342,7 @@
                   var typed = new Typed('#element',{strings:['Are you <br> looking for a <br> Web Developer ?','Hii \, <br> I am Sameer Kaushik <br> I am a Web Developer'],typeSpeed:65,  backSpeed: 25});
               </script>
             </div> 
+            
         </div>
 
         <!--carousel--> 
