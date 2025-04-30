@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Supermarket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .navbar{
+            background-color: rgb(231, 227, 227);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-item.dropdown:hover .dropdown-menu {
+          display: block;
+        }
+        .n1-logo{
+          display: flex;
+          flex-direction: row;
+        }
+        .n1-logo .nav-item .nav-link:hover span {
+          color: rgb(255, 60, 0); 
+          transition: color 0.3s ease-in-out; 
+        }
+        .main-1:hover .arrow{
+           
+           margin-left: 4px;
+          transition: 0.5s;
+         
+          
+        }
+        .main-1:hover{
+           
+         opacity: 0.9;
+         
+          
+        }
+        .main-2:hover .arrow{
+           
+           margin-left: 4px;
+          transition: 0.5s;
+         
+          
+        }
+        .main-2:hover{
+           
+         opacity: 0.9;
+         
+          
+        }
+        .main-3:hover .arrow{
+           
+           margin-left: 4px;
+          transition: 0.5s;
+         
+          
+        }
+        .main-3:hover{
+           
+         opacity: 0.9;
+         
+          
+        }
+
+        .main-1{
+            background-image: url("images/women-fashion.jpg");
+            background-size: cover;
+         
+            border: 1px double pink;
+          }
+          .main-3{
+            background-image: url("images/kids-fashion.jpg");
+            background-size: cover;
+          
+            border: 1px double pink;
+          }
+
+          .main-2{
+            background-image: url("images/men-fashion.jpg");
+            background-size: cover;
+           
+            border: 1px double pink;
+          }
+        .mail div{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+        @media screen and (min-width: 401px){
+          .main{
+     
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            height: 550px;
+     
+   }
+        }
+       @media screen and (max-width: 800px){
+        .main{
+          display: grid;
+          grid-template-columns: 12fr;
+          height: 1200px;
+         
+        }
+        
+       }
+
+
+
+     
+    
+    .number{
+      width: 250px;
+     
+    }
+    .name:required+span{
+      display: none;
+    }
+    .name:invalid+span{
+      display:contents;
+      color: red;
+    }
+    .number:required+span{
+      display: none;
+    }
+    .number:invalid+span{
+      display:contents;
+      color: red;
+    }
+    .number~span{
+      display: none;
+    }
+    .number:focus~span{
+      display:contents;
+      color: red;
+    }
+    .number:valid~span{
+      display: none;
+    }
+    .password~span{
+      display: none;
+    }
+    .password:focus~span{
+      display:contents;
+      color: red;
+    }
+    .password:valid~span{
+      display:none;
+     
+    }
+    
+
+    .imgBag:hover {
+      transform: translatex(-10px);
+      transition: 0.5s;
+    }
+    .imgShirt:hover {
+      transform: translatex(-10px);
+      transition: 0.5s;
+    }
+  
+    .imgBag{
+    
+      transition: 0.5s;
+    }
+  
+   
+       
+    .imgShirt{
+      height: 350px;
+
+      transition: 0.5s;
+    }
+    .figOne{
+      background-image: url("./images/croped top.jpg");
+      position: relative;
+    }
+    .logos{
+      
+      visibility: hidden;
+
+    }
+    .imgTop:hover + div{
+     visibility: visible;
+      transform: translatey(-110px);
+      transition: 0.5s;
+     
+     
+    }
+
+    .footer-grid{
+            height: 40vh;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            justify-content: space-between;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 45px;
+        }
+        .footer-logo{
+            margin-top: 10px;
+        }
+        .footer-title{
+            font-size: 20px;
+        }
+      
+        .fc-2{
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer{
+
+background-color: rgb(46, 44, 44);
+margin-top: 50px;
+color: white;
+
+
+}
+.line{
+text-align: center;
+font-size: 30px;
+padding-top: 100px;
+
+}
+.footer-login{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 40px;
+}
+.email{
+background-color:black;
+padding: 15px;
+width: 150px;
+margin-right: 15px;
+font-size: 20px;
+
+
+}
+.subscribe{
+font-size: 20px;
+background-color: rgb(207, 179, 179);
+padding: 15px;
+
+
+}
+   
+       
+    </style>
+    
+
+</head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg px-5" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"  > <span class="bi bi-truck"></span>Free shipping world wide</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse mx-xxl-5 " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown ms-5" >
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <span ><img src="./images/us-flag.jpg " width="20px" height="20px" alt="us-flag"></span> United States
+                </a>
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item" href="#">India</a></li>
+                  <li><a class="dropdown-item" href="#">China</a></li>
+                  <li><a class="dropdown-item" href="#">Japan</a></li>
+                </ul>
+              </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 USD
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Euro</a></li>
+                  <li><a class="dropdown-item" href="#">Rupees</a></li>
+                </ul>
+              </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Hindi</a></li>
+                  <li><a class="dropdown-item" href="#">Telgu</a></li>
+                  <li><a class="dropdown-item" href="#">Marathi</a></li>
+                </ul>
+              </li>
+              
+
+             <div class="d-flex mx-xxl-5 ">
+                <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="#">Shipping</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">FAQ</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li>
+             </div>
+
+              <div class="n1-logo mx-xxl-5 ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><span class="bi bi-facebook"></span></a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><span class="bi bi-twitter"></span></a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><span class="bi bi-instagram"></span></a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><span class="bi bi-whatsapp"></span></a>
+                 <li class="nav-item">
+                  <button data-bs-target="#loginModal" data-bs-toggle="modal" id="login" class="btn btn-primary position-absolute end-0">Sign-up</button>
+                </li>
+              </div>
+          
+           
+          </div>
+        </div>
+      </nav>
+        <div class="d-flex justify-content-around mt-2 border border-2 border-black py-2">
+          <div class="fs-2 fw-bold">
+            Shopper.
+          </div>
+          <div>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">cataloge</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Docks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="n1-logo ">
+              <ul type="none" class="d-flex flex-row ">
+                <li class="nav-item ">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span class="bi bi-search"></span></button>
+
+                </li>
+                 <li class="nav-item mx-4">
+                  <a class="nav-link active" aria-current="page" href="#"><span class="bi bi-person"></span></a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><span class="bi bi-heart"></span></a>
+                </li>
+                 <li class="nav-item mx-4">
+                  <a class="nav-link active " aria-current="page" href="#"><span class="bi bi-cart position-relative"><span class="badge bg-danger border rounded-circle position-absolute " style="top: -8px; left: 6px;">2</span></span></a>
+                </li>
+              </ul>
+          </div>
+        </div>
+
+        <marquee class="fs-4 bg-black text-white mt-1 " behavior="slide" direction=""  loop="5500" scrollamount="20"><span class="bi bi-lightning-fill" style="color: gold;"></span>HAPPY HOLIDAY DEALS ON EVERYTHING <span class="bi bi-lightning-fill" style="color: gold;"></span></marquee>
+ 
+       <main class="main " >
+          <div class="main-1 position-relative">
+            <div class="position-absolute top-50  text-white fs-2 fw-bold" style="margin-left: 200px;">WOMEN</div>
+            <div class="position-absolute fs-5 fw-bold bg-white pe-4 py-2 " style="bottom: 80px; left: 200px;" >Shop for women <span class="bi bi-arrow-right arrow position-absolute"></span></div>
+          </div>
+          <div class="main-2 position-relative">
+            <div class="position-absolute top-50  text-white fs-2 fw-bold"style="margin-left: 200px;">MEN</div>
+            <div class="position-absolute fs-5 fw-bold bg-white pe-4 py-2" style="bottom: 80px; left: 200px;" >Shop for men <span class="bi bi-arrow-right arrow position-absolute"></span></div>
+          </div>
+          <div class="main-3 position-relative">
+            <div class="position-absolute top-50  text-white fs-2 fw-bold"style="margin-left: 200px;">Kids</div>
+            <div class="position-absolute fs-5 fw-bold bg-white pe-4 py-2" style="bottom: 80px; left: 200px;" >Shop for Kids <span class="bi bi-arrow-right arrow position-absolute"></span></div>
+          </div>
+       </main>
+
+
+
+
+       <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+         <div class="offcanvas-header">
+           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Search here</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body ">
+           <div class="mb-5">
+              <select >
+                <option > Select category</option>
+                <option > Women</option>
+                <option > Men</option>
+                <option > Kids</option>
+              </select>
+           </div>
+           <div class="input-group ">
+              <input class="input-group-text form-control"  type="search" name="search"> <button class="bi bi-search input-group-text" type="submit" ></button>
+           </div>
+         </div>
+       </div>
+
+
+       <div class="modal" tabindex="-1" id="loginModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <form  style="display: flex; flex-direction: column;align-items: center;">
+
+                  
+                  <div  style="border: 1px solid black; border-radius: 8px; height: 640px;width: 380px;padding: 8px; " >
+                 
+                    <h1>Create Account</h1>
+                    <div>
+                      <span style="font-weight: bold;">Your name</span> <br>
+                      <input  type="text" class="name" required placeholder="First & Last name">
+                      <span >*</span>
+                      
+                     
+                    </div>
+                    <div style="margin-top: 10px;">
+                      <span style="font-weight: bold;">Mobile number</span> <br>
+                      <select name="country" style="height: 25px; ">
+                        <option selected value="+91">+91</option>
+                        <option  value="+92">+92</option>
+                        <option  value="+93">+93</option>
+                        <option  value="+94">+94</option>
+                        <option  value="+95">+95</option>
+                      </select>
+                      <input  type="text" placeholder="Mobile Number" required class="number" pattern="\d{10}">
+                      <span>*</span>
+                      <br>
+                      <span>should be 10 digit</span>
+                    </div>
+                    <div style="margin-top: 10px;">
+                      <span style="font-weight: bold;">Password</span><br>
+                      <input type="password" placeholder="At least 6 characters" class="password" pattern="\w{6,}" required> <br>
+                      <span>password must be tleast 6 characters</span>
+                    </div>
+                
+                    <div style="margin-top: 10px;">
+                      To verify your number, we will send you a text message with a temporary code. Message and data rates may apply.
+                
+                    </div >
+                    <div class="d-flex justify-content-center">
+                      <button style="width: 300px; border: 2px solid blck; border-radius: 15px;margin-top: 30px; height: 35px; background-color: rgb(237, 237, 24);" type="submit">Verify mobile number</button>
+
+                    </div>
+                   
+                    <hr style="margin-top: 30px;margin-bottom: 30px;">
+                    <div>
+                     <div style="font-weight: bold;"> Buying for work?</div>
+                     <div style="color: rgb(66, 89, 236);">Create a free business account</div>
+                
+                    </div>
+                    <hr style="margin-top: 30px;margin-bottom: 20px;">
+                    <div>
+                
+                      
+                       <div style="font-weight: bold;"> Already have an account? <span style="color: blue;">Sign in</span></div>
+                        By creating an account or logging in, you agree to Amazon's <span style="color: blue;">Conditions of Use</span> and <span style="color: blue;">Privacy Policy.</span>
+                    </div>
+                  </div>
+                 
+                
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 30px;">
+          <div  style="display: grid; grid-template-columns: 1fr 11fr;">
+            <div class="bi bi-truck  text-danger"></div>
+            <div>
+              <div class="fw-bold">free shippin</div>
+              <div>from all orders over $100</div>
+            </div>
+          </div>
+           <div  style="display: grid; grid-template-columns: 1fr 11fr;">
+            <div class="bi bi-arrow-left-right  text-danger"></div>
+            <div>
+              <div class="fw-bold">free returns</div>
+              <div>Return money within 30 days</div>
+            </div>
+          </div>
+            <div  style="display: grid; grid-template-columns: 1fr 11fr;">
+            <div class="bi bi-lock  text-danger"></div>
+            <div>
+              <div class="fw-bold">Secure shopping</div>
+              <div>You're in safe hands</div>
+            </div>
+          </div>
+            <div  style="display: grid; grid-template-columns: 1fr 11fr;">
+            <div class="bi bi-tag  text-danger"></div>
+            <div>
+              <div class="fw-bold">Over 10,000 Styles</div>
+              <div>We have everything you need</div>
+            </div>
+          </div>
+          </div>
+          <hr>
+        <div class="d-flex flex-column align-items-center mt-4 mb-5">
+          <div>  New Collection</div>
+          <div class="fs-1"> Best Picks 2025</div>
+          <div class="text-center">Appear, dry there darkness they're seas, dry waters thing fly midst. <br> Beast, above fly brought Very green.</div>
+        </div>
+
+        <div class="" style=" height: 350px; display: grid; grid-template-columns: 4fr 8fr; margin: 0px 200px 0px 200px; grid-gap: 25px; overflow: hidden;">
+          <div class="   border-1 overflow-hidden position-relative">
+            <img class="imgBag " src="./images/bag.jpg" height="350px" width="400px" style="z-index: 0;" alt="">
+            <div class="position-absolute  " style="z-index: 1; top: 150px; left: 100px;">
+              <div class="fs-3">Bages collection</div>
+              <div class="fs-4 ">shop now <span id="arrowic" class="   bi bi-arrow-right"></span></div>
+            </div>
+
+          </div>
+        
+          <div class="   border-1 overflow-hidden position-relative">
+            <img class="imgShirt " src="./images/mens printed shirt (1).jpg" height="350px" width="800px" style="z-index: 0;" alt="">
+            <div class="position-absolute  " style="z-index: 1; top: 150px; left: 120px;">
+              <div class="fs-3">Mens printed shirt</div>
+              <div class="fs-4 ">shop now <span id="arrowic" class="   bi bi-arrow-right"></span></div>
+            </div>
+
+          </div>
+        
+         
+        </div>
+
+
+
+
+        <div class="" style=" height: 350px; display: grid; grid-template-columns: 8fr 4fr; margin: 40px 200px 0px 200px; grid-gap: 25px; overflow: hidden;">
+         
+        
+          <div class="   border-1 overflow-hidden position-relative">
+            <img class="imgShirt " src="./images/women landscape.jpg" height="350px" width="800px" style="z-index: 0;" alt="">
+            <div class="position-absolute  text-black  rounded " style="z-index: 1; top: 150px; left: 80px; background-color: rgba(240, 248, 255, 0.386);">
+              <div class="fs-3">women trend</div>
+              <div class="fs-4 ">shop now <span id="arrowic" class="   bi bi-arrow-right"></span></div>
+            </div>
+
+          </div>
+
+          <div class="   border-1 overflow-hidden position-relative">
+            <img class="imgBag " src="./images/sweat-shirt.jpg" height="350px" width="400px" style="z-index: 0;" alt="">
+            <div class="position-absolute  text-black  rounded " style="z-index: 1; top: 150px; left: 120px; background-color: rgba(240, 248, 255, 0.386);">
+              <div class="fs-3">Sweat dress</div>
+              <div class="fs-4 ">shop now <span id="arrowic" class="   bi bi-arrow-right"></span></div>
+            </div>
+
+          </div>
+        
+        </div>
+
+
+        <div class="mt-5 d-flex justify-content-center fs-1">
+          Top month Sellers
+        </div>
+
+
+
+
+        <div>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div style="height: 480px; width: 100%; background-color: rgb(152, 25, 25);" class="d-block" >
+                  <div class="" style="display: grid; grid-template-columns: 3fr 3fr 3fr 3fr; justify-content: center; margin-left: 100px;">
+
+
+                    <div class="mt-4 ">
+                      <figure class="  position-relative">
+                        <img class="imgTop" style="height: 330px; width: 250px;" src="./images/croped top.jpg" alt="">
+                        <div class="logos position-absolute bottom-0 end-50"  >
+                          <span class="bi bi-heart border-1 rounded-circle bg-white p-2 "></span>
+                          <span class="bi bi-eye border-1 rounded-circle bg-white p-2 " ></span>
+                          <span class="bi bi-cart border-1 rounded-circle bg-white p-2 "></span>
+                        </div>
+                        <figcaption class="text-white">
+                          <div>dress</div>
+                          <div class="fw-bold fs-4">Cropped top</div>
+                          <div>Price= 30$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/leather shoes.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Shoes</div>
+                          <div class="fw-bold fs-4">Leather shoes</div>
+                          <div>Price= 70$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/Leather mid-heel Sandals.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Sandal</div>
+                          <div class="fw-bold fs-4">Leather mid-heel Sandals</div>
+                          <div>Price= 40$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/saari.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Clothes</div>
+                          <div class="fw-bold fs-4">Saari</div>
+                          <div>Price= 40$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div style="height: 480px; width: 100%; background-color: rgb(152, 25, 25);" class="d-block" >
+                  <div class="" style="display: grid; grid-template-columns: 3fr 3fr 3fr 3fr; justify-content: center; margin-left: 100px;">
+
+
+                    <div class="mt-4 ">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/croped top.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>dress</div>
+                          <div class="fw-bold fs-4">Cropped top</div>
+                          <div>Price= 30$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/leather shoes.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Shoes</div>
+                          <div class="fw-bold fs-4">Leather shoes</div>
+                          <div>Price= 70$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/Leather mid-heel Sandals.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Sandal</div>
+                          <div class="fw-bold fs-4">Leather mid-heel Sandals</div>
+                          <div>Price= 40$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/saari.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Cloth</div>
+                          <div class="fw-bold fs-4">Saari</div>
+                          <div>Price= 40$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div style="height: 480px; width: 100%; background-color: rgb(152, 25, 25);" class="d-block" >
+                  <div class="" style="display: grid; grid-template-columns: 3fr 3fr 3fr 3fr; justify-content: center; margin-left: 100px;">
+
+
+                    <div class="mt-4 ">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/croped top.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>dress</div>
+                          <div class="fw-bold fs-4">Cropped top</div>
+                          <div>Price= 30$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/leather shoes.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Shoes</div>
+                          <div class="fw-bold fs-4">Leather shoes</div>
+                          <div>Price= 70$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/Leather mid-heel Sandals.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Sandal</div>
+                          <div class="fw-bold fs-4">Leather mid-heel Sandals</div>
+                          <div>Price= 40$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+
+                    <div class="mt-4">
+                      <figure>
+                        <img style="height: 330px; width: 250px;" src="./images/saari.jpg" alt="">
+                        <figcaption class="text-white">
+                          <div>Cloth</div>
+                          <div class="fw-bold fs-4">Saari</div>
+                          <div>Price= 40$</div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+
+        
+     <footer>
+        
+      <div class="line">Want style Ideas and Treats?</div>
+      <div class="footer-login">
+      <div class="email">Email</div>
+      <div class="subscribe">subscribe</div>
+      </div>
+
+
+      <div class="footer-grid">
+          <div class="fc-1">
+              <div class="footer-title">SHOPPER.</div>
+              <div class="footer-logo">
+              <span class="bi bi-facebook"></span>
+              <span class="bi bi-twitter"></span>
+              <span class="bi bi-instagram"></span>
+              <span class="bi bi-linkedin"></span>
+              </div>
+          </div>
+          <div class="fc-2">
+              <span class="bold">Support</span>
+              <span>Contact Us</span>
+              <span>FAQs</span>
+              <span>Size Guide</span>  
+              <span>Shipping & Returns</span>
+          </div>
+          <div class="fc-2">
+              <span class="bold">Shop</span>
+              <span>Men's Shopping</span>
+              <span>Women's Shopping</span>
+              <span>Kids' Shopping</span>
+             <span> Discounts</span>
+          </div>
+          <div class="fc-2">
+             <span class="bold"> Company</span>
+              <span>Our Story</span>
+              <span>Careers</span>
+              <span> Terms & Conditions</span>
+              <span>Privacy & Cookie policy</span>
+          </div>
+          <address class="fc-2">
+              <span class="bold">Contact</span>
+             <span> 1-202-555-0105</span>
+              <span>1-202-555-0106</span>
+              <span>help@shopper.com</span>
+          </address>
+      </div>
+      
+   </footer>
+      </body>
+</html>

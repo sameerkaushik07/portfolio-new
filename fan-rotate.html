@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propeller Animation</title>
+    <style>
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="./public/images/propeller.jpg" height="300px" width="300px" id="blade">
+
+    <button onclick="btnClick(1000)">Speed 1</button>
+    <button onclick="btnClick(600)">Speed 2</button>
+    <button onclick="btnClick(400)">Speed 3</button>
+    <button onclick="btnClick(250)">Speed 4</button>
+    <button onclick="btnClick(170)">Speed 5</button>
+    <button onclick="stopAnimation()">Stop</button>
+
+    <script>
+        function btnClick(speed) {
+            var imgs = document.getElementById("blade");
+            imgs.style.animationName = "rotate";
+            imgs.style.animationDuration = speed + "ms";
+            imgs.style.animationTimingFunction = "linear";
+            imgs.style.animationIterationCount = "infinite";
+        }
+
+        function stopAnimation() {
+            var imgs = document.getElementById("blade");
+            imgs.style.animationName = ""; 
+        }
+    </script>
+
+</body>
+</html>

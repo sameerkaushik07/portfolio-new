@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input{
+      border: 1px solid black;border-radius: 3px;
+      width: 300px ;
+      height: 25px;
+    }
+    .number{
+      width: 250px;
+     
+    }
+    .name:required+span{
+      display: none;
+    }
+    .name:invalid+span{
+      display:contents;
+      color: red;
+    }
+    .number:required+span{
+      display: none;
+    }
+    .number:invalid+span{
+      display:contents;
+      color: red;
+    }
+    .number~span{
+      display: none;
+    }
+    .number:focus~span{
+      display:contents;
+      color: red;
+    }
+    .number:valid~span{
+      display: none;
+    }
+    .password~span{
+      display: none;
+    }
+    .password:focus~span{
+      display:contents;
+      color: red;
+    }
+    .password:valid~span{
+      display:none;
+     
+    }
+    
+  </style>
+</head>
+<body >
+  <form  style="display: flex; flex-direction: column;align-items: center;">
+
+  <div ><img   src="./images/amazon-logo.JPG" ></div>
+  <div  style="border: 1px solid black; border-radius: 8px; height: 600px;width: 320px;padding: 8px; " >
+ 
+    <h1>Create Account</h1>
+    <div>
+      <span style="font-weight: bold;">Your name</span> <br>
+      <input  type="text" class="name" required placeholder="First & Last name">
+      <span>*</span>
+      
+     
+    </div>
+    <div style="margin-top: 10px;">
+      <span style="font-weight: bold;">Mobile number</span> <br>
+      <select name="country" style="height: 25px;">
+        <option selected value="+91">+91</option>
+        <option  value="+92">+92</option>
+        <option  value="+93">+93</option>
+        <option  value="+94">+94</option>
+        <option  value="+95">+95</option>
+      </select>
+      <input type="text" placeholder="Mobile Number" required class="number" pattern="\d{10}">
+      <span>*</span>
+      <br>
+      <span>should be 10 digit</span>
+    </div>
+    <div style="margin-top: 10px;">
+      <span style="font-weight: bold;">Password</span><br>
+      <input type="password" placeholder="At least 6 characters" class="password" pattern="\w{6,}"> <br>
+      <span>password must be tleast 6 characters</span>
+    </div>
+
+    <div style="margin-top: 10px;">
+      To verify your number, we will send you a text message with a temporary code. Message and data rates may apply.
+
+    </div >
+   
+    <button style="width: 300px; border: 2px solid blck; border-radius: 15px;margin-top: 30px; height: 35px; background-color: rgb(237, 237, 24);" type="submit">Verify mobile number</button>
+    <hr style="margin-top: 30px;margin-bottom: 30px;">
+    <div>
+     <div style="font-weight: bold;"> Buying for work?</div>
+     <div style="color: rgb(66, 89, 236);">Create a free business account</div>
+
+    </div>
+    <hr style="margin-top: 30px;margin-bottom: 20px;">
+    <div>
+
+      
+       <div style="font-weight: bold;"> Already have an account? <span style="color: blue;">Sign in</span></div>
+        By creating an account or logging in, you agree to Amazon's <span style="color: blue;">Conditions of Use</span> and <span style="color: blue;">Privacy Policy.</span>
+    </div>
+  </div>
+ 
+
+</form>
+</body>
+</html>

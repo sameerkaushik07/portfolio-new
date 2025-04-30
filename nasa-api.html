@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <script>
+        function bodyload(){
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                
+                data.photos.map(function(obj){
+                    var div = document.createElement("div");
+                    div.style.width="200px";
+                    div.style.height="300px";
+                
+
+                    div.innerHTML = `
+                   <div class="card m-2 p-2">
+                    <a href="${obj.img_src}" target="_blank"><img class="card-img-top" src=${obj.img_src} height="130" width="200"></a>
+
+                        <div class="card-header bg-body-secondary">
+                             id ${obj.id}
+                        </div>
+                        <div class="card-body bi bi-camera">
+                            ${obj.camera.name}
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    
+                    `
+                    document.getElementById("mainBody").appendChild(div);
+
+                })
+            })
+        }
+    </script>
+</head>
+
+
+<body onload="bodyload()">
+    <div class="fw-bold fs-3 text-success">
+        MARSE PHOTO'S
+    </div>
+   <div style="display: flex; flex-direction: row;flex-wrap: wrap;"  id="mainBody" >
+
+    
+   </div>
+</body>
+</html>

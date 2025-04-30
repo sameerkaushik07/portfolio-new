@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
+  <script type="text/javascript">
+        "use strict"
+      function verify(){
+        var password=document.getElementById("inpPassword");
+        var exp=/(?=.*[A-Z])\w{4,15}/;
+        var lblText = document.getElementById("lblText");
+        var progress = document.getElementById("progress");
+        if (password.value.match(exp)) {
+           progress.style.width='100%';
+             progress.innerHTML="strong password"
+            
+            
+        } else if(password.value==""){
+               progress.style.width='100%';
+               progress.style.background='red';
+                progress.innerHTML="password requird";
+                progress.class='progress-bar-striped';
+            
+            
+        }
+       
+        else{
+            if (password.value.length<4) {
+                progress.style.width='50%';
+                progress.innerHTML="poor password";
+            
+            } else {
+                progress.style.width='70%';
+                  progress.innerHTML="weak password";
+            
+                
+            }
+                
+
+        }
+      }
+
+    </script>
+   
+</head>
+<body>
+    <div>
+         <input type="password" id="inpPassword" placeholder="enter password" onkeyup="verify()">
+    </div>
+    <div id="lblText">
+
+    </div >
+    <div style="width: 190px;" class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+    <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress"></div>
+    </div>    
+</body>
+</html>

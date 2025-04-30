@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        var movies = ["BRAHMA","CAPTAIN AMERICA"]
+        
+        function loadMovie(){
+            document.getElementById("slt").innerHTML="";
+             movies.map(function(movie){
+                
+                var opt = document.createElement("option");
+                opt.innerHTML=movie.toUpperCase();
+                opt.value=movie.toUpperCase();
+                document.getElementById("slt").appendChild(opt);
+            })
+        }
+        function addElement(){
+              var inpMovieS =  document.getElementById("inpMovie").value;
+              inpMovie = inpMovieS.toUpperCase();
+         
+         if (inpMovie.length===0) {
+            alert("please enter a value")
+            
+         }
+         
+          else {
+            if (movies.indexOf(inpMovie)===-1) {
+                movies.push(inpMovie);
+                loadMovie();
+                document.getElementById("inpMovie").value="";
+                
+            } else {
+              alert("Item already exists")
+            }
+            
+         }
+
+        }
+        function removeItm(){
+            var itm = document.getElementById("slt").ariaSelected;
+            var indx = movies.indexOf("itm");
+            movies.pop(indx);
+            loadMovie();
+        }
+        function dltAll(){
+            movies.length=0;
+            loadMovie();
+        }
+        function editeClick(){
+            var itm = document.getElementById("slt").value;
+            var indx = movies.indexOf("itm");
+           var edtVal= prompt("edite item",itm);
+            if (edtVal.value==="NULL") {
+                alert("editing cancelled");
+                
+            } else {
+                movies.splice(indx,1,edtVal);
+                loadMovie();
+                
+            }
+
+
+
+        }
+    </script>
+  
+</head>
+<body onload="loadMovie()" class="m-5">
+    <div>
+        <h3> <span class="bi bi-ticket-detailed"></span>ticket admin portal</h3>
+    </div>
+    <div class="btn-group">
+        <input type="text" id="inpMovie">
+        <button class="srch" onclick="addElement()">add</button>
+    </div>
+    <div>
+        <select size="3" id="slt">
+
+        </select>
+    </div>
+    <div id="movieCount">
+
+    </div>
+    <div class="btn-group ">
+        
+        <button><span class="bi bi-pen-fill btn btn-primary btn-group" onclick="editeClick()">Edite</span></button>
+        <button><span class="bi bi-trash btn btn-danger btn-group" onclick="removeItm()">Remove</span></button>
+        <button><span class="bi bi-trash btn btn-outline-danger btn-group" onclick="dltAll()">Delete all</span></button>
+    </div>
+    
+</body>
+</html>

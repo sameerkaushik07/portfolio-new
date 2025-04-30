@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         
+
+         var valMili = 100;  
+        function milliSecond(){
+        
+        if (valMili<=900) {
+            valMili = valMili+99;
+        } else {
+            valMili = 100;
+        }
+      
+        document.getElementById("millisecond").innerHTML=(`${valMili} MiliSec`);
+
+        }
+       
+      
+       
+       
+       
+        var valSec = 0;
+        function second(){
+        if (valSec<59) {
+            valSec = valSec+1;
+        } else {
+            valSec = 0;
+        }
+      
+        document.getElementById("second").innerHTML=(`${valSec} Sec`);
+
+        }
+
+
+
+
+
+        var valMinut = 0;
+        function minut(){
+        if (valMinut<59) {
+            valMinut = valMinut+1;
+        } else {
+            valMinut = 0;
+        }
+      
+        document.getElementById("minut").innerHTML=(`${valMinut} Min`);
+
+        }
+
+
+
+        var valHour = 0;
+        function hourt(){
+        valHour++;
+      
+        document.getElementById("hour").innerHTML=(`${valHour} Hour`);
+
+        }
+               
+
+    function controling(){
+                window.milli = setInterval(milliSecond,100);
+                window.sec = setInterval(second,1000);
+                window.min = setInterval(minut,60000);  
+                window.hour = setInterval(hour,3600000);
+               document.getElementById("strt").style.display = "none"; 
+    }
+    function controlingStop(){
+        clearInterval(milli)
+        clearInterval(sec)
+        clearInterval(min)
+        clearInterval(hour)
+        document.getElementById("strt").style.display = "block";
+
+    }
+    function rst(){
+        document.getElementById("second").innerHTML="00";
+        valSec = 0;
+        document.getElementById("millisecond").innerHTML="00";
+        valMili = 100;
+        document.getElementById("minut").innerHTML="00";
+        valMinut = 0;
+        document.getElementById("hour").innerHTML="00";
+        valHour = 0;
+    }
+ 
+</script>
+</head>
+<body style="height: 100vh; display: flex;flex-direction: column; justify-content: center; align-items: center; width: 100%; background-image: url(./images/alarm-clock-light-bulb-near-assorted-stationery.jpg); background-size: cover;margin-right: 300px;">
+    <div style="display: flex; flex-direction: row; font-size: 35px; ">
+
+       <div style="width: auto ; border: 1px solid rgb(227, 18, 18); padding: 3px; color: rgb(227, 18, 18); " id="hour">
+        hour
+       </div>
+       <div style="width: auto ; border: 1px solid rgb(123, 225, 27); padding: 3px; color:  rgb(123, 225, 27);" id="minut">
+        minut
+       </div>
+       <div style="width: auto ; border: 1px solid rgb(22, 41, 213); padding: 3px; color: rgb(22, 41, 213) ;" id="second">
+        second
+       </div>
+       <div style="width: 240px ; border: 1px solid rgb(231, 39, 157); padding: 3px; color: rgb(231, 39, 157) ; " id="millisecond">
+        milisec
+       </div>
+
+    </div>
+
+  <div style="margin-top: 10px;margin-right: 125px; ">
+    <button style="position: absolute; font-size: 50px; background-color: red; border-radius: 15px;" onclick="controlingStop()"  >Stop</button>
+    <button style="position: absolute; font-size: 50px; background-color:  greenyellow; border-radius: 15px; " id="strt" onclick="controling()" >Start</button>
+    
+  </div>
+  <div>
+    <button style="margin-top: 100px; font-size: 40px; background-color: brown; border-radius: 15px;" onclick="rst()">Reset</button>
+  </div>
+  
+
+</body>
+</html>

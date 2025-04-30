@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @keyframes spin{
+            from{
+                transform:rotate(0deg);
+            }
+            25%{
+                border-top-color: rgb(7, 248, 7);
+                 border-left-color: red;
+                  border-right-color: blue;
+                  
+
+                  
+            }
+            50%{
+                border-top-color: rgb(133, 243, 8);
+                 border-left-color: red;
+                  border-right-color: blue;
+
+            }
+            75%{
+                border-top-color: rgb(74, 242, 8);
+                 border-left-color: red;
+                  border-right-color: blue;
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            border-bottom: 2px solid transparent;
+            border-radius: 50%;
+            animation-name: spin;
+            animation-duration:1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div >
+
+    </div>
+</body>
+</html>
