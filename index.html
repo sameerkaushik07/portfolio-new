@@ -10,7 +10,9 @@
 
    <style  type="text/css">
    
-
+        .skill-mobile{
+          display: none;
+        }
         #time{
                   white-space: nowrap; 
                   font-size: 2rem;
@@ -218,7 +220,12 @@
         }
 
         @media screen and (max-width: 768px) { 
-
+        .skill-mobile{
+          display: block;
+         }
+        .skill-mobile figure{
+          display: inline-block;
+         }
        #projects{
           margin-top: 100px;
         }
@@ -276,6 +283,9 @@
         position: static;
         font-size: small;
 
+      }
+      #home2{
+        display: none;
       }
   
   }
@@ -596,7 +606,59 @@
 
 
     </div>
-  
+  <!-- Skills for mobile view -->
+   <div class="skill-mobile">
+    <figure   >
+      <img style="border-radius: 12px;" src="./images/bootstrap.JPG" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning ">BOOTSTRAP</figcaption>
+    </figure>
+
+    <figure >
+      <img style="border-radius: 12px;" src="./images/html.JPG" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">HTML</figcaption>
+    </figure>
+
+    <figure>
+      <img style="border-radius: 12px;" src="./images/css.JPG" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">CSS</figcaption>
+    </figure>
+
+    <figure >
+      <img style="border-radius: 12px;" src="./images/js.JPG" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">JAVASCRIPT</figcaption>
+    </figure> 
+
+    <figure >
+      <img style="border-radius: 12px; width: 270px;" src="./images/mongodb.jpeg" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">MONGODB</figcaption>
+    </figure>
+
+    <figure >
+      <img style="border-radius: 12px; width: 250px;" src="./images/expressjs.png" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">EXPRESSJS</figcaption>
+    </figure>
+
+    <figure >
+      <img style="border-radius: 12px; width: 280px;" src="./images/react.png" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">REACTJS</figcaption>
+    </figure>
+
+    <figure >
+      <img style="border-radius: 12px; width: 250px;" src="./images/nodejs.JPG" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">NODEJS</figcaption>
+    </figure>
+
+    <figure >
+      <img style="border-radius: 12px; width: 250px;" src="./images/my sql.png" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">MYSQL</figcaption>
+    </figure>
+
+    <figure >
+      <img style="border-radius: 12px; width: 150px;" src="./images/photoshop.JPG" alt="">
+      <figcaption class="text-center fw-bold border border-1 bg-warning">PHOTOSHOP</figcaption>
+    </figure>
+
+   </div>
 
    <!-- projects -->
 
@@ -644,6 +706,24 @@
          <a href="./stop-watch.html"> <img id="projectImg" src="./images/stopwatch.png" alt="Stopwatch"></a>
         </figure>
 
+
+        <figure>
+         <figcaption class="fw-bold fs-2 text-white text-center bg-danger w-auto">Ticket admin</figcaption>
+         <a href="./ticketadmin.html"> <img id="projectImg" src="./images/ticket admin.png" alt="ticket-admin"></a>
+        </figure>
+
+
+       <figure>
+         <figcaption class="fw-bold fs-2 text-white text-center bg-danger w-auto">Nasa API</figcaption>
+         <a href="./nasa-api.html"> <img id="projectImg" src="./images/nasa-api.png" alt="nasa api"></a>
+        </figure>
+ 
+
+       <figure>
+         <figcaption class="fw-bold fs-2 text-white text-center bg-danger w-auto">Card</figcaption>
+         <a href="./card.html"> <img id="projectImg" src="./images/card.png" alt="Card"></a>
+        </figure>
+ 
 
       </div>
    </div>
