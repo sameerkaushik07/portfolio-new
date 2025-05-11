@@ -298,7 +298,6 @@
       var dept = new Date();
         var day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
         var month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-      //  document.write(day[dept.getDay()] + dept.getDate() + month[dept.getMonth()] + dept.getFullYear() )
         document.getElementById("date").innerHTML=(`${ day[dept.getDay()]}&nbsp;${ dept.getDate()}${ month[dept.getMonth()]}&nbsp;${ dept.getFullYear()}`)
         setInterval(function(){ var time = new Date();
           document.getElementById("time").innerHTML =time.toLocaleTimeString();},100)
@@ -381,7 +380,12 @@
                 </div>
               </div>
               <div class="carousel-item carousel1 ">
-              </div>
+                  <div style="height: 100%; width: 100%;" class="d-flex flex-column justify-content-center align-items-center ">
+                    <div class="text-center fw-bold fs-3">RESUME</div>
+                    <img src="./images/resume.jpg" width="45%" height="80%" alt="resume">
+                    <a  href="./images/resume updated.pdf" download="sameer kaushik (CV)">dowmload</a>
+                  </div> 
+               </div>
               <div class="carousel-item carousel1  ">
               </div>
             </div>
