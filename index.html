@@ -64,6 +64,22 @@
         z-index: 0;
       }
 
+      /* Make all carousel slides same height so screen doesn't move */
+.carousel-fixed-height .carousel-item {
+  min-height: 320px;         /* mobile default */
+}
+
+@media (min-width: 768px) {
+  .carousel-fixed-height .carousel-item {
+    min-height: 380px;       /* bigger on desktop */
+  }
+}
+
+.carousel-fixed-height .carousel-item > div {
+  height: 100%;              /* inner content fills full height */
+}
+
+
       /* NAVBAR */
       .navbar-glass {
         background: rgba(15,23,42,0.92) !important;
@@ -548,11 +564,11 @@
             <!-- Right: Carousel (Connect + Resume) -->
             <div class="col-lg-6">
               <div class="carousel-card p-3 p-md-4">
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+               <div id="carouselExampleAutoplaying" class="carousel slide carousel-fixed-height" data-bs-ride="carousel">
                   <div class="carousel-inner" style="min-height: 270px;">
                     <!-- Connect -->
-                    <div class="carousel-item active">
-                      <div class="carousel1 d-flex flex-column justify-content-center align-items-center p-4">
+                    <div class="carousel-item">
+                      <div class="carousel1 d-flex flex-column justify-content-center align-items-center p-4 h-100">
                         <h2 class="fw-bold mb-3 text-dark text-center">
                           Connect with <span class="text-success">Me</span>
                         </h2>
@@ -575,8 +591,8 @@
                     </div>
 
                     <!-- Resume -->
-                    <div class="carousel-item">
-                      <div class="carousel1 d-flex flex-column justify-content-center align-items-center p-4">
+                    <div class="carousel-item active">
+                      <div class="carousel1 d-flex flex-column justify-content-center align-items-center p-4 h-100">
                         <div class="text-center fw-bold fs-4 text-dark mb-2">Resume</div>
                         <img src="./images/Resumejpg.jpg"
                              class="resume-thumb mb-3"
@@ -1077,29 +1093,32 @@
 
     <script>
       // Typed text for hero
-      var typedElement = new Typed('#element', {
-        strings: [
-          "Are you looking for a Web Developer?",
-          "Hi, I'm Sameer Kaushik — a Web Developer."
-        ],
-        typeSpeed: 55,
-        backSpeed: 25,
-        loop: true
-      });
+     var typedElement = new Typed('#element', {
+  strings: [
+    "Hi, I'm Sameer Kaushik — a Web Developer."
+  ],
+  typeSpeed: 55,
+  backSpeed: 0,
+  showCursor: false,
+  loop: false
+});
+
 
       // Typed text for quote
-      var typedQuote = new Typed('#quote', {
-        strings: [
-          "Skill development is a lifelong process. Small improvements each day lead to great achievements over time."
-        ],
-        typeSpeed: 45,
-        backSpeed: 20,
-        showCursor: false,
-        loop: true
-      });
+   var typedQuote = new Typed('#quote', {
+  strings: [
+    "Skill development is a lifelong process. Small improvements each day lead to great achievements over time."
+  ],
+  typeSpeed: 40,
+  backSpeed: 0,
+  showCursor: false,
+  loop: false
+});
+
 
       // Footer year
       document.getElementById('footer-year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
+
